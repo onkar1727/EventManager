@@ -9,10 +9,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig {
 
     @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
+    public WebMvcConfigurer corsConfigurer()
+    {
+        return new WebMvcConfigurer()
+        {
             @Override
-            public void addCorsMappings(CorsRegistry registry) {
+            public void addCorsMappings(CorsRegistry registry)
+            {
                 registry.addMapping("/**") // allow all API paths
                         .allowedOrigins("http://localhost:5173") // allow Vue dev server
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // allowed methods
